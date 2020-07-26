@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <title>Js Assignment from chapter 41 to 67</title>
+  </head>
+  <style>
+    form input {
+      width: 300px !important;
+      margin: 0 auto;
+    }
+
+    #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+  </style>
+  <body>
+    <!-- <div>Task 01 from chapter 43-48</div>    -->
+    <!-- <button onclick="alert('Button is working')">Click Me</button> -->
+
+    <!-- <div>Task 02 from chapter 43-48</div>-->
+
+    <!-- <img onmouseover="changePic1()" onmouseout="changePic2()" src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png" id="img1" width="400" onclick="alert('Image is clicked')"> -->
+
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTExtoLVhMIfPRj_8d5RQKF2qjwUbuYL2tZTg&usqp=CAU" onclick="alert('Image is clicked')" width="400"> -->
+
+    <!-- <h1 id="num">0</h1> -->
+    <!-- <input type="number" id="num" value="2" > -->
+    <!-- <button onclick="increment()">Increment</button>
+<button onclick= 'decrement()'>Decrement</button> -->
+
+    <!-- Name : <span id="user-name"></span><br><br>
+UserEmail: <span id="email"></span><br><br>
+Password : <span id="pass"></span><br><br>
+
+    <form >
+        Name : <input type="text" id="name"> </br></br>
+         Email :<input type="text"  id="user-email"><br/></br>
+         Password :<input type="password"  id="user-password"><br/></br>
+    <br>
+    <input type="button" value="Submit" onClick="userValue()">
+  </form> -->
+    <!-- </div> -->
+
+    <!-- <span id="val1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, iste.</span>
+<button id="btn" onclick="showVal()">Read Me</button>
+<span id="val2">This is dummy Paragraph</span> -->
+    <!-- <br><br><br>
+<br><br><br>
+<form >
+    <div class="form-group mx-sm-3 mb-10">
+      <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
+    </div>
+    <div class="form-group mx-sm-3 mb-10">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+  
+    <button type="button" class="btn btn-primary"  onclick="result()">Submit</button>
+  </form>
+<br><br><br>
+<br><br><br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Roll Number</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td id="name1"></td>
+        <td id="email1"></td>
+        <td id="password1"></td>
+        <td>
+            <i class="fa fa-pencil" aria-hidden="true" onclick="Edit()"></i>
+        </td>
+        <td>
+            <i class="fa fa-trash" aria-hidden="true" onclick="deleteRow()"></i>
+        </td>
+
+      </tr>
+     
+    </tbody>
+  </table>
+
+  <form id="form2" >
+    <div class="form-group mx-sm-3 mb-10">
+      <input type="text" class="form-control" id="name2" aria-describedby="emailHelp" placeholder="Enter Name">
+    </div>
+    <div class="form-group mx-sm-3 mb-10">
+        <input type="email" class="form-control" id="email2" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="password" class="form-control" id="password2" placeholder="Password">
+    </div>
+  
+    <button type="button" class="btn btn-primary"  onclick="result()">Save Edit</button>
+  </form> -->
+<!-- 
+    <div>
+      <h1>DOM</h1>
+       <div id="form-content" class="content">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" /
+        ><label for="last-name">Last Name</label
+        ><input type="text" id="last-name" /
+        ><label for="email">mail <input type="text" id="email" />
+     </label>
+        </div>
+      <div id = "main-content" class="content"><p class="render">First Name : Alex</p>
+        <p class="render">Last Name: Bank</p>
+        <p class="render">Email : alexbank@example.com</p>
+        <p class="render">Country : Pakistan</p>
+         <p class="render">contact : +92 300 1234567</p>
+      </div>
+    </div> -->
+
+    <!-- <img id="myImg" src="" alt="Snow" style="width:100%;max-width:300px"> -->
+    <img id="myImg"  src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"  width="300">
+    <img id="myImg"  src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"  width="300">
+    <img id="myImg"  src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"  width="300">
+    <img id="myImg"  src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"  width="300">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+    <script src="app.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg")
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+    </script>
+  </body>
+</html>
